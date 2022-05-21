@@ -7,6 +7,8 @@ import './Menubar.css'
 const Menubar = () => {
     let activeStyle = {
         color: 'orange',
+        borderBottom: '3px solid orange',
+     
     };
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -29,12 +31,16 @@ const Menubar = () => {
                         <NavLink className='menu-link' to="/blogs" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>Blogs</NavLink>
-                        <NavLink className='menu-link' to="/signin" style={({ isActive }) =>
-                            isActive ? activeStyle : undefined
-                        }>Sign In</NavLink>
+                        
                         <NavLink className='menu-link' to="dashboard" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>Dashboard</NavLink>
+                        <NavLink className='menu-link' to="/signin" style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }>Sign In</NavLink>
+                        <NavLink className='menu-link' to="/register" style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }>Register</NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
