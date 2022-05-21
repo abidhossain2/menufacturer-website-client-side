@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { GiCartwheel } from 'react-icons/gi'
+import { GiCarWheel } from 'react-icons/gi'
 import { NavLink } from 'react-router-dom';
 import './Menubar.css'
 
@@ -9,13 +9,13 @@ const Menubar = () => {
         color: 'orange',
     };
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" variant="dark">
             <Container>
                 <Navbar.Brand href="#home"><span className='first-heading-name'>Delta</span> <br />
                     <div className='d-flex align-items-center'>
                         <div className='d-flex align-items-center'>
                             <span className='second-heading-name'>Tw</span>
-                            <span><GiCartwheel className='wheel'></GiCartwheel></span>
+                            <span><GiCarWheel className='wheel'></GiCarWheel></span>
                         </div>
                         <span className='third-heading-name ms-2'>Wheeler Industry</span>
                     </div>
