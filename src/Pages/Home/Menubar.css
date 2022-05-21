@@ -1,12 +1,15 @@
 .first-heading-name{
     font-size: 40px;
     font-weight: bold;
+    font-family: 'Milonga', cursive;
 }
 .second-heading-name{
     font-size: 29px;
+    font-family: 'Milonga', cursive;
 }
 .third-heading-name{
     font-size: 29px;
+    font-family: 'Milonga', cursive;
 }
 
 .wheel{
@@ -24,5 +27,13 @@
 }
 
 .menu-link{
+    font-family: 'Galdeano', sans-serif;
     text-decoration: none;
+    color: white;
+    padding: 25px;
+    font-size: 19px;
+}
+
+.menu-link:hover{
+    color: white;
 }
