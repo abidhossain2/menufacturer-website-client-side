@@ -1,0 +1,22 @@
+.footer-section{
+    background-color: #272727;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-container .single-footer{
+    width: 360px;
+    height: 330px;
+    border: 1px solid white;
+}
+
+.single-footer-icon{
+    color: orange;
+    font-size: 22px;
+}
