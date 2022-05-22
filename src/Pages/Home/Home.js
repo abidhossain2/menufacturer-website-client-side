@@ -1,6 +1,7 @@
 import React from 'react';
 import Menubar from '../Menubar/Menubar';
-import BikeParts from './BikeParts';
+import BikeParts from './BikeParts/BikeParts';
+import BusinessSummary from './BusinessSummary/BusinessSummary';
 import './Home.css'
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
                 <h2 className='quote'>The Best <br />Bike<br /> Manufacturer</h2>
             </div>
             <BikeParts></BikeParts>
+            <BusinessSummary></BusinessSummary>
         </>
     );
 };

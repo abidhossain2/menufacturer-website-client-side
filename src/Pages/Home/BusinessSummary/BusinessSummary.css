@@ -1,0 +1,84 @@
+.summary-section{
+    margin-top: 100px;
+}
+.summary-heading{
+    text-align: center;
+    font-family: 'Milonga', cursive;
+    font-size: 35px;
+    color: white;
+    margin-bottom: 18px;
+}
+
+.summary-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    margin-top: 72px;
+}
+
+.summary-container div{
+    height: 200px;
+    width: 200px;
+}
+
+.summary-no{
+    color: white;
+    font-size: 48px;
+    font-family: 'Galdeano';
+}
+
+.summary-name{
+    font-size: 40px;
+    color: cadetblue;
+    font-family: 'Galdeano';
+}
+
+.break-line{
+    background: orange;
+    height: 4px;
+    width: 58px;
+    display: block;
+}
+
+.summary-icon{
+    color: #c3b9b9;
+    font-size: 47px;
+}
+
+.summary-info{
+    height: 192px;
+    width: 1000px;
+    margin: auto;
+    border-radius: 13px;
+    box-shadow: 0px 0px 23px -10px cadetblue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.summary-info-heading{
+    font-family: 'Galdeano', sans-serif;
+    color: white;
+}
+
+.quote-btn{
+    border: none;
+    background: #09093e;
+    color: white;
+    padding: 10px 28px;
+    font-family: 'Milonga';
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.contact-btn{
+    border: none;
+    background: #fb7409;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 17px;
+    color: white;
+    margin-left: 23px;
+    font-family: 'Milonga';
+}

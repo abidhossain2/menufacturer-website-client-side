@@ -1,7 +1,8 @@
 import React from 'react';
 import './BikeParts.css'
 import { useQuery } from 'react-query';
-import BikePart from './BikePart';
+import BikePart from '../BikePart/BikePart';
+
 
 const BikeParts = () => {
     const { data: bikePats, isLoading } = useQuery('bikeParts', () => fetch('http://localhost:5000/bikeParts').then(res => res.json()))
