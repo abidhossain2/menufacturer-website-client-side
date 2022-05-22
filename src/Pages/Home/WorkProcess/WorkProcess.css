@@ -1,0 +1,61 @@
+.workprocess-section{
+    background: #baf1f0;
+    padding: 60px;
+}
+
+.workprocess-heading{
+        text-align: center;
+        font-family: 'Milonga', cursive;
+        font-size: 32px;
+        color: black;
+        margin-bottom: 18px;
+}
+
+.workprocess-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    margin-top: 55px;
+}
+
+.single-workprocess-container{
+    height: 280px;
+    width: 180px;
+}
+
+.single-workprocess{
+    width: 166px;
+    height: 166px;
+    margin: 18px auto;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0e0345;
+    color: white;
+}
+.icon-container{
+    width: 166px;
+    height: 166px;
+    margin: 18px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.right-arrow{
+    font-size: 40px;
+    color: black;
+}
+
+.work-icon{
+    font-size: 58px;
+}
+
+.single-workprocess-container p{
+    font-size: 28px;
+    font-family: 'Galdeano';
+    font-weight: bold;
+    color: black;
+}

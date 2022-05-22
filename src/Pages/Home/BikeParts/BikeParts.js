@@ -11,7 +11,7 @@ const BikeParts = () => {
     }
     return (
         <>
-        <h2 className='product-heading'>Our Products</h2>
+        <h3 className='product-heading'>Our Products</h3>
         <span className='line'><span className='divider'></span></span>
             <div className='all-product'>
                 {

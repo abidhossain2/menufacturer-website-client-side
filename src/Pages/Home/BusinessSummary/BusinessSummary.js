@@ -7,8 +7,8 @@ const BusinessSummary = () => {
     return (
         <>
             <div className='summary-section'>
-                <h2 className='summary-heading'>Why WE Are Best</h2>
-                <span className='line'><span className='divider'></span></span>
+                <h3 className='summary-heading'>Glimpse Of Our Company</h3>
+                <span className='summary-line'><span className='summary-divider'></span></span>
                 <div className='summary-container'>
                     <div>
                         <span><AiOutlineFlag className='summary-icon'></AiOutlineFlag></span> <br />

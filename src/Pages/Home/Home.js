@@ -4,6 +4,7 @@ import BikeParts from './BikeParts/BikeParts';
 import BusinessSummary from './BusinessSummary/BusinessSummary';
 import FeedBack from './FeedBack/FeedBack';
 import './Home.css'
+import WorkProcess from './WorkProcess/WorkProcess';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             </div>
             <BikeParts></BikeParts>
             <BusinessSummary></BusinessSummary>
+            <WorkProcess></WorkProcess>
             <FeedBack></FeedBack>
         </>
     );

@@ -1,18 +1,18 @@
 .single-product{
     width: 350px;
-    height: 664px;
-    border: 1px solid #423f3f;
+    height: 677px;
     border-radius: 20px;
     text-align: center;
     margin-top: 60px;
     font-family: 'Galdeano', sans-serif;
+    background: #e7e6eb63;
 }
 .single-product p{
     padding: 8px;
 }
 .single-product .min-order, .quantity, .price{
     font-size: 21px;
-    color: #a3a1a1;
+    color: #1d1919;
 }
 .product-img{
     width: 340px;
@@ -21,23 +21,27 @@
     border-radius: 23px;
 }
 .detail{
-    color: #5c5454;
+    color: #413737;
 }
 
 .name{
-    color: #a3a1a1;
+    color: black;
+    font-weight: bold;
 }
 
 .single-product .purchase-btn{
     background: none;
     color: white;
-    padding: 3px 28px;
+    padding: 8px 44px;
     background-color: #0d3230;
-    border: 2px solid #6f6d6d;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 17px;
+    background: #17153c;
+    border: none;
 }
 
 .single-product .purchase-btn:hover{
-    border: 2px solid whitesmoke;
+    background-color: black;
+    color: white;
     transition: all 0.9s ease-in-out;
 }

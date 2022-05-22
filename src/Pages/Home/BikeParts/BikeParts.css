@@ -2,15 +2,15 @@
     text-align: center;
     font-family: 'Milonga', cursive;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 32px;
     margin-top: 40px;
-    color: white;
+    color: black;
 }
 
 .line{
     display: block;
     width: 147px;
-    background: white;
+    background: black;
     height: 2px;
     margin: auto;
     position: relative;

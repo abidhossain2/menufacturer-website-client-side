@@ -1,14 +1,47 @@
+.summary-section:before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
 .summary-section{
     margin-top: 100px;
+    position: relative;
+    background-image: url('https://media.istockphoto.com/photos/bicycle-chain-gearshift-transmission-picture-id1156464124?b=1&k=20&m=1156464124&s=170667a&w=0&h=3ag_0yWSabsWQz-X8H5g8N8DSp9sMo3AhMsqMWFYNnY=');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 26px;
 }
 .summary-heading{
     text-align: center;
     font-family: 'Milonga', cursive;
-    font-size: 35px;
+    font-size: 32px;
     color: white;
     margin-bottom: 18px;
+    position: relative;
 }
-
+.summary-line{
+    display: block;
+    width: 147px;
+    background: white;
+    height: 2px;
+    margin: auto;
+    position: relative;
+}
+.summary-divider{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: orange;
+    position: absolute;
+    top: -5px;
+    left: 67px;
+    border-radius: 50%;
+}
 .summary-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -23,14 +56,16 @@
 
 .summary-no{
     color: white;
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Galdeano';
+    position: relative;
 }
 
 .summary-name{
-    font-size: 40px;
-    color: cadetblue;
+    font-size: 35px;
+    color: rgb(141, 251, 255);
     font-family: 'Galdeano';
+    position: relative;
 }
 
 .break-line{
@@ -38,11 +73,13 @@
     height: 4px;
     width: 58px;
     display: block;
+    position: relative;
 }
 
 .summary-icon{
     color: #c3b9b9;
     font-size: 47px;
+    position: relative;
 }
 
 .summary-info{
@@ -55,6 +92,8 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
+    position: relative;
+    background-color: #1d1717;
 }
 
 .summary-info-heading{
@@ -64,7 +103,7 @@
 
 .quote-btn{
     border: none;
-    background: #09093e;
+    background: #2c2c69;
     color: white;
     padding: 10px 28px;
     font-family: 'Milonga';
