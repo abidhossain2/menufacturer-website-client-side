@@ -2,6 +2,7 @@ import React from 'react';
 import Menubar from '../Menubar/Menubar';
 import BikeParts from './BikeParts/BikeParts';
 import BusinessSummary from './BusinessSummary/BusinessSummary';
+import FeedBack from './FeedBack/FeedBack';
 import './Home.css'
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             </div>
             <BikeParts></BikeParts>
             <BusinessSummary></BusinessSummary>
+            <FeedBack></FeedBack>
         </>
     );
 };
