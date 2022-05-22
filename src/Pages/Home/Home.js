@@ -2,6 +2,7 @@ import React from 'react';
 import Menubar from '../Menubar/Menubar';
 import BikeParts from './BikeParts/BikeParts';
 import BusinessSummary from './BusinessSummary/BusinessSummary';
+import Enquiry from './Enquiry/Enquiry';
 import FeedBack from './FeedBack/FeedBack';
 import './Home.css'
 import WorkProcess from './WorkProcess/WorkProcess';
@@ -17,6 +18,7 @@ const Home = () => {
             <BusinessSummary></BusinessSummary>
             <WorkProcess></WorkProcess>
             <FeedBack></FeedBack>
+            <Enquiry></Enquiry>
         </>
     );
 };

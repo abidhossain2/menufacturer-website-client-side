@@ -1,0 +1,69 @@
+.enquiry-section{
+    padding: 100px;
+    background-color: olive;
+    margin-top: 67px;
+}
+
+.enquiry-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
+    background-color: white;
+}
+
+
+.enquiry-heading{
+    font-family: 'Milonga', cursive;
+}
+
+.enquiry-section input{
+    border: none;
+    border-bottom: 1px solid #c7bbbb;
+    font-family: 'Galdeano', sans-serif;
+    width: 275px;
+    outline: none;
+    background: none;
+    color: black;
+}
+
+.enquiry-container .email{
+    margin-left: 42px;
+    background:none;
+    color: black;
+}
+.enquiry-form{
+    display: flex;
+}
+.select-container{
+    width: 275px;
+    border: none;
+    border-bottom: 1px solid #c7bbbb;
+    margin-left: 42px;
+}
+
+.select{
+    outline: none;
+    width: 275px;
+    border: none;
+    background: none;
+
+}
+
+.text-area{
+    width: 593px;
+    border: none;
+    border-bottom: 1px solid #c7bbbb;
+    outline: none;
+    font-family: 'Galdeano', sans-serif;
+    background: none;
+    color: black;
+}
+
+.enquiry-btn{
+    border: none;
+    background: #19194e;
+    color: white;
+    padding: 13px 39px;
+    font-family: 'Galdeano';
+    font-size: 17px;
+}
