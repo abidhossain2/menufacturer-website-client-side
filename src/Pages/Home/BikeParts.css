@@ -1,0 +1,35 @@
+.product-heading{
+    text-align: center;
+    font-family: 'Milonga', cursive;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 40px;
+    color: white;
+}
+
+.line{
+    display: block;
+    width: 147px;
+    background: white;
+    height: 2px;
+    margin: auto;
+    position: relative;
+}
+
+.divider{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: orange;
+    position: absolute;
+    top: -5px;
+    left: 67px;
+    border-radius: 50%;
+}
+
+.all-product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 40px;
+}
