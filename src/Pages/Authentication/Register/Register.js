@@ -5,12 +5,14 @@ import Menubar from '../../Menubar/Menubar';
 import './Register.css'
 import auth from '../../../firebase.init'
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useUpdateProfile,useSignInWithGoogle, useAuthState } from 'react-firebase-hooks/auth';
 
 const Register = () => {
     const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [updateProfile, updating] = useUpdateProfile(auth);
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
+    const [user] = useAuthState(auth)
     if (updating) {
         return <p>Updating...</p>;
       }
@@ -21,9 +23,11 @@ const Register = () => {
             console.log(user);
         })
         await updateProfile({displayName: data.name})
-        navigate('/')
-        window.location.reload();
     };
+    if(user){
+        window.location.reload();
+        navigate('/')
+    }
     return (
         <>
             <div className='form-section-menu'>
@@ -43,8 +47,8 @@ const Register = () => {
                         <button className='auth-btn'>Register</button>
                         <span className='form-line'><span className='form-divider'></span></span>
                         <div><p className='text-center exist-account'>Already have an account!!! <Link className='auth-link' to='/signin'>Sign In</Link></p></div>
-                        <button className='auth-btn'>Sign In with Google</button>
                     </form>
+                    <button className='auth-btn' onClick={() => signInWithGoogle()}>Sign In with Google</button>
                 </div>
             </div>
         </>
