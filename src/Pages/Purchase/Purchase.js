@@ -45,7 +45,7 @@ const Purchase = () => {
     const increaseBtn = () => {
         const orderAmount = parseInt(minimumOrder)
         const availableAmount = parseInt(availableQuantity);
-        if (minimumOrder < (availableAmount - 1)) {
+        if ((minimumOrder < availableAmount) && (minimumOrder !== availableAmount)) {
             fetch(`http://localhost:5000/bikeParts/${id}`, {
                 method: 'PUT',
                 headers: {
@@ -93,7 +93,9 @@ const Purchase = () => {
                         <input type="text" placeholder='Phone' /> <br /><br />
                         <input type="text" placeholder='Address' /> <br /><br />
                         <p className='total-price'>Total Price: tk {parseInt(price) * parseInt(minimumOrder)}</p>
-                        <button className='order-btn'>Place Order</button>
+                        {
+                           error ? <button disabled className='order-btn' style={{background:"gray"}}>Place Order</button> : <button className='order-btn'>Place Order</button>
+                        }
                     </div>
                 </div>
             </div>
