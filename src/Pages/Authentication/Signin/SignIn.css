@@ -88,3 +88,10 @@
     font-family: 'Galdeano';
     text-decoration: none;
 }
+
+.user-error{
+    font-family: 'Galdeano';
+    font-size: 20px;
+    color: #9b0b0b;
+    font-weight: bold;
+}
