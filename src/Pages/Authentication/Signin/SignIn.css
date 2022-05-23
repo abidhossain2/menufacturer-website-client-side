@@ -95,3 +95,27 @@
     color: #9b0b0b;
     font-weight: bold;
 }
+
+.modal-body input{
+    width: 315px;
+    border: none;
+    outline: none;
+    background: aliceblue;
+    padding: 13px 14px;
+    font-family: 'Galdeano';
+}
+
+.send-btn{
+    border: none;
+    background: #e56e42;
+    color: white;
+    font-family: 'Galdeano';
+    padding: 5px 24px;
+}
+.close-btn{
+    border: none;
+    background: #b9461c;
+    color: white;
+    font-family: 'Galdeano';
+    padding: 5px 24px;
+}

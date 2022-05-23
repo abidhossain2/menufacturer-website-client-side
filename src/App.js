@@ -1,5 +1,7 @@
 import './App.css';
 import { QueryClient, QueryClientProvider } from 'react-query'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import Home from './Pages/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 import Purchase from './Pages/Purchase/Purchase';
@@ -21,6 +23,7 @@ function App() {
           <Route path='/signin' element={<SignIn></SignIn>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
         </Routes>
+        <ToastContainer/>
       </div>
     </QueryClientProvider>
   );
