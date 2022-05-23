@@ -1,0 +1,90 @@
+.form-section-menu{
+    background-color: black;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.signin-form{
+    background: #efecec;
+    width: 450px;
+    height: 490px;
+}
+
+.signin-form input{
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid #c2b9b9;
+    width: 260px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    font-size: 17px;
+    font-family: 'Galdeano';
+}
+
+.auth-heading{
+    font-family: 'Milonga';
+    font-weight: bold;
+}
+
+.auth-btn{
+    border: none;
+    background: orange;
+    color: white;
+    padding: 6px 39px;
+    font-size: 18px;
+    font-family: 'Galdeano';
+    display: block;
+    margin: auto;
+}
+
+.auth-btn:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.8s;
+}
+
+.require-error{
+    font-family: 'Galdeano';
+}
+
+.form-line{
+    display: block;
+    width: 290px;
+    background: orange;
+    height: 2px;
+    margin: 24px auto;
+    position: relative;
+}
+
+.form-divider{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #151514;
+    position: absolute;
+    top: -5px;
+    left: 137px;
+    border-radius: 50%;
+}
+
+.forgot-pass-btn{
+    color: blueviolet;
+    font-family: 'Galdeano';
+    margin-left: 250px;
+    cursor: pointer;
+}
+
+.exist-account{
+    font-family: 'Galdeano';
+}
+.auth-link{
+    font-family: 'Galdeano';
+    text-decoration: none;
+}

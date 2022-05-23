@@ -1,0 +1,25 @@
+.register-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-form{
+    background: #efecec;
+    width: 450px;
+    height: 590px;
+}
+
+.register-form input{
+    border: none;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid #c2b9b9;
+    width: 260px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    font-size: 17px;
+    font-family: 'Galdeano';
+}
