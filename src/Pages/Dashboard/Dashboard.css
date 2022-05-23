@@ -1,0 +1,16 @@
+.nested-link-container{
+    text-align: center;
+}
+
+.nested-link{
+    text-decoration: none;
+    color: black;
+    font-family: 'Galdeano';
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px 30px;
+}
+
+.nested-link:hover{
+    color: orange;
+}
