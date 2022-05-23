@@ -21,6 +21,7 @@ const BikeParts = () => {
                     ></BikePart>)
                 }
             </div>
+            
         </>
     );
 };

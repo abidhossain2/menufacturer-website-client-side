@@ -1,0 +1,89 @@
+.purchase-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.purchase-container{
+    font-family: 'Galdeano';
+}
+
+.purchase-product-name{
+    font-size: 26px;
+    font-weight: bold;
+}
+.purchase-product-detail{
+    font-size: 19px;
+}
+.purchase-product-order, .purchase-product-quantity, .purchase-product-price{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.order-info{
+    background-color: #efecec;
+    width: 500px;
+    height: 470px;
+    padding: 41px;
+}
+
+.order-info input{
+    border: none;
+    background: none;
+    border-bottom: 1px solid #d4bfbf;
+    width: 327px;
+    font-family: 'Galdeano';
+    padding-left: 10px;
+    display: block;
+    margin: auto;
+}
+
+.order-btn{
+    display: block;
+    margin: auto;
+    border: none;
+    background: none;
+    font-family: 'Galdeano';
+    font-size: 20px;
+    background: orange;
+    padding: 6px 27px;
+    color: white;
+}
+
+.order-btn:hover{
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.back-btn{
+    border: none;
+    background: black;
+    color: white;
+    font-size: 19px;
+    margin-left: 34px;
+    margin-top: 20px;
+}
+
+.order-amount-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 370px;
+    margin: auto;
+}
+
+.order-input{
+    width: 112px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+}
+.amount-icon{
+    cursor: pointer;
+}
+.order-piece{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 21px;
+}

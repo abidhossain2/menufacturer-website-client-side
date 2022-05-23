@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BikePart.css'
 
 const BikePart = ({bikePart}) => {
-    const {name, img, detail, price, minimumOrder, availableQuantity} = bikePart;
+    const navigate = useNavigate();
+    const {name, img, detail, price, minimumOrder, availableQuantity, _id} = bikePart;
+    const handlePurchase = () => {
+        navigate(`/bikeparts/${_id}`)
+    }
+
     return (
         <div className='single-product'>
             <img className='product-img' src={img} alt="" />
@@ -11,7 +17,7 @@ const BikePart = ({bikePart}) => {
             <p className='min-order'>Minimum Order: {minimumOrder} Pieces</p>
             <p className='quantity'>Available Quantity: {availableQuantity} Pieces</p>
             <p className='price'>Price: tk {price}</p>
-            <button className='purchase-btn'>Purchase</button>
+            <button className='purchase-btn' onClick={handlePurchase}>Purchase</button>
         </div>
     );
 };
