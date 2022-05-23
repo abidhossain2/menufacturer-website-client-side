@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { CgArrowLeft } from 'react-icons/cg'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 import './Purchase.css'
+import Loader from '../Loader/Loader';
 
 
 const Purchase = () => {
@@ -13,7 +14,7 @@ const Purchase = () => {
     const [error, setError] = useState('')
     
     if (isLoading) {
-        return <p> Loading..................</p>;
+        return <Loader></Loader>
     }
     const { img, name, detail, minimumOrder, availableQuantity, price, orderQuantity } = purchaseProduct;
     const backBtn = () => {

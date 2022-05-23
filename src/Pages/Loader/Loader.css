@@ -1,0 +1,22 @@
+.spinner-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.spinner-container{
+    width: 50px;
+    height: 50px;
+}
+.spinner{
+    width: 50px;
+    height: 50px;
+    animation: rotation 0.4s ease infinite;
+}
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(360deg);
+    }
+}

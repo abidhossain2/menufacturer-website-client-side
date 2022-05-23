@@ -10,12 +10,10 @@ import { useUpdateProfile,useSignInWithGoogle, useAuthState } from 'react-fireba
 const Register = () => {
     const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const [updateProfile, updating] = useUpdateProfile(auth);
+    const [updateProfile] = useUpdateProfile(auth);
     const [signInWithGoogle] = useSignInWithGoogle(auth);
     const [user] = useAuthState(auth)
-    if (updating) {
-        return <p>Updating...</p>;
-      }
+
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(auth, data.email, data.password)
         .then((userCredential) => {
