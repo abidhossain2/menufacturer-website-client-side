@@ -87,3 +87,21 @@
     font-size: 20px;
     margin-left: 21px;
 }
+
+.decrease-error{
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
+.increase-error{
+    font-size: 16px;
+    color: red;
+    font-weight: bold;
+}
+
+.total-price{
+    font-weight: bold;
+    font-family: 'Galdeano';
+    font-size: 25px;
+    text-align: center;
+}
