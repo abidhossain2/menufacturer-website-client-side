@@ -5,6 +5,8 @@ import { CgArrowLeft } from 'react-icons/cg'
 import { FaPlus, FaMinus } from 'react-icons/fa'
 import './Purchase.css'
 import Loader from '../Loader/Loader';
+import {useAuthState} from 'react-firebase-hooks/auth'
+import auth from '../../firebase.init'
 
 
 const Purchase = () => {
@@ -12,7 +14,7 @@ const Purchase = () => {
     const { data: purchaseProduct, isLoading, refetch } = useQuery('purchaseProduct', () => fetch(`http://localhost:5000/bikeParts/${id}`).then(res => res.json()))
     const navigate = useNavigate();
     const [error, setError] = useState('')
-    
+    const [user] = useAuthState(auth)
     if (isLoading) {
         return <Loader></Loader>
     }
@@ -64,6 +66,21 @@ const Purchase = () => {
             setError(<p className='increase-error'>Can not greater than available quantity</p>)
         }
     }
+    const handleOrder = () => {
+        const userEmail = user?.email;
+        const totalPrice = parseInt(price) * parseInt(minimumOrder)
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify({img, name, detail, minimumOrder, totalPrice, orderQuantity, userEmail})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+    }
     return (
         <>
             <button onClick={backBtn} className="back-btn"><CgArrowLeft></CgArrowLeft></button>
@@ -89,13 +106,13 @@ const Purchase = () => {
                 </div>
                 <div>
                     <div className='order-info'>
-                        <input type="text" placeholder='Name' /> <br /><br />
-                        <input type="email" placeholder='Email' /> <br /><br />
+                        <input type="text" placeholder='Name'  value={user?.displayName}/> <br /><br />
+                        <input type="email" placeholder='Email' value={user?.email}/> <br /><br />
                         <input type="text" placeholder='Phone' /> <br /><br />
                         <input type="text" placeholder='Address' /> <br /><br />
                         <p className='total-price'>Total Price: tk {parseInt(price) * parseInt(minimumOrder)}</p>
                         {
-                           error ? <button disabled className='order-btn' style={{background:"gray"}}>Place Order</button> : <button className='order-btn'>Place Order</button>
+                           error ? <button disabled className='order-btn' style={{background:"gray"}}>Place Order</button> : <button className='order-btn' onClick={handleOrder}>Place Order</button>
                         }
                     </div>
                 </div>
