@@ -42,3 +42,11 @@
 .menu-link:hover{
     color: white;
 }
+
+.display-name{
+    border: 1px solid black;
+    padding: 3px 15px;
+    border-radius: 11px;
+    background: orange;
+    font-family: 'Galdeano';
+}

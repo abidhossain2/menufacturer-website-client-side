@@ -1,12 +1,29 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Menubar from '../../Menubar/Menubar';
 import './Register.css'
+import auth from '../../../firebase.init'
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useUpdateProfile } from 'react-firebase-hooks/auth';
 
 const Register = () => {
+    const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const [updateProfile, updating] = useUpdateProfile(auth);
+    if (updating) {
+        return <p>Updating...</p>;
+      }
+    const onSubmit = async data => {
+        await createUserWithEmailAndPassword(auth, data.email, data.password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+        })
+        await updateProfile({displayName: data.name})
+        navigate('/')
+        window.location.reload();
+    };
     return (
         <>
             <div className='form-section-menu'>
@@ -16,10 +33,12 @@ const Register = () => {
                 <div className='register-form'>
                     <h3 className='text-center my-3 auth-heading'>Register</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("name", { required: true })} placeholder="Name" /> <br />
-                        <input {...register("email", { required: true })} placeholder="Email" /> <br />
-                        <input {...register("password", { required: true })} placeholder="Password" /> <br />
-                        <input {...register("confirmPassword", { required: true })} placeholder="Confirm Password" />
+                        <input {...register("name", { required: true, minLength: 4})} placeholder="Name" /> <br />
+                        {errors.name?.type === "minLength" && <p className='text-center length-error'>Name should be 4 characters long</p>}
+                        <input {...register("email", { required: true, pattern: {value: /\S+@\S+\.\S+/} })} placeholder="Email" type='email'/> <br />
+                        {errors.email?.type === "pattern" && <p className='text-center length-error'>Enter Valid Email</p>}
+                        <input {...register("password", { required: true, minLength:6 })} placeholder="Password" type='password'/> <br />
+                        {errors.password?.type === "minLength" && <p className='text-center length-error'>Password at least 6 characters long</p>}
                         {(errors.email || errors.password || errors.name ||errors.confirmPassword) && <p className='text-center require-error'>All fields are required</p>} <br />
                         <button className='auth-btn'>Register</button>
                         <span className='form-line'><span className='form-divider'></span></span>

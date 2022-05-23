@@ -23,3 +23,9 @@
     font-size: 17px;
     font-family: 'Galdeano';
 }
+
+.length-error{
+    font-family: 'Galdeano';
+    color: red;
+    font-weight: bold;
+}

@@ -1,7 +1,10 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { GiCarWheel } from 'react-icons/gi'
 import { NavLink } from 'react-router-dom';
+import auth from '../../firebase.init';
 import './Menubar.css'
 
 const Menubar = () => {
@@ -10,6 +13,10 @@ const Menubar = () => {
         borderBottom: '3px solid orange',
      
     };
+    const [user] = useAuthState(auth)
+    const logout = () => {
+        signOut(auth);
+      };
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark">
             <Container>
@@ -25,6 +32,7 @@ const Menubar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
+                        {user && <NavLink className='menu-link display-name' to="/" >{user?.displayName}</NavLink>}
                         <NavLink className='menu-link' to="/" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>Home</NavLink>
@@ -35,12 +43,13 @@ const Menubar = () => {
                         <NavLink className='menu-link' to="dashboard" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>Dashboard</NavLink>
-                        <NavLink className='menu-link' to="/signin" style={({ isActive }) =>
+                        {!user && <NavLink className='menu-link' to="/signin" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
-                        }>Sign In</NavLink>
-                        <NavLink className='menu-link' to="/register" style={({ isActive }) =>
+                        }>Sign In</NavLink>}
+                        {!user && <NavLink className='menu-link' to="/register" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
-                        }>Register</NavLink>
+                        }>Register</NavLink>}
+                        {user && <NavLink className='menu-link' to="" onClick={logout}>Sign Out</NavLink>}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -1,12 +1,22 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import Menubar from '../../Menubar/Menubar';
 import './SignIn.css'
 
 const SignIn = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [user] = useAuthState(auth);
+    const from = location.state?.from?.pathname || "/";
+    if(user){
+        navigate(from, { replace: true });
+    }
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
+
     return (
         <>
             <div className='form-section-menu'>
@@ -16,8 +26,8 @@ const SignIn = () => {
                 <div className='signin-form'>
                     <h3 className='text-center my-3 auth-heading'>Sign In</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("email", {required:true})} placeholder="Email" /> <br />
-                        <input {...register("password", { required: true })} placeholder="Password"/>  
+                        <input {...register("email", { required: true })} placeholder="Email" /> <br />
+                        <input {...register("password", { required: true })} placeholder="Password" />
                         <div><p className='forgot-pass-btn'>Forgot Password</p></div>
                         {(errors.email || errors.password) && <p className='text-center require-error'>Both fields are required</p>} <br />
                         <button className='auth-btn'>Sign In</button>
