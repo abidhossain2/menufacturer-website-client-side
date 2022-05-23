@@ -27,7 +27,7 @@ const SignIn = () => {
     if (user) {
         navigate(from, { replace: true });
     }
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data)
         signInWithEmailAndPassword(auth, data.email, data.password)
@@ -79,16 +79,15 @@ const SignIn = () => {
                 <div className='signin-form'>
                     <h3 className='text-center my-3 auth-heading'>Sign In</h3>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input {...register("email", { required: true })} placeholder="Email" type='email' /> <br />
-                        <input {...register("password", { required: true })} placeholder="Password" type='password' />
+                        <input {...register("email")} placeholder="Email" type='email' required /> <br />
+                        <input {...register("password")} placeholder="Password" type='password' required/>
                         <div><p className='forgot-pass-btn' onClick={handleShow}>Forgot Password</p></div>
-                        {(errors.email || errors.password) && <p className='text-center require-error'>Both fields are required</p>} <br />
                         {userError} {passwordError} {defect}
                         <button className='auth-btn'>Sign In</button>
                         <span className='form-line'><span className='form-divider'></span></span>
                         <div><p className='text-center exist-account'>Don't have an account!!! <Link className='auth-link' to='/register'>Register</Link></p></div>
-                        <button className='auth-btn' onClick={() => signInWithGoogle()}>Sign In with Google</button>
                     </form>
+                        <button className='auth-btn' onClick={() => signInWithGoogle()}>Sign In with Google</button>
                 </div>
             </div>
         </>
