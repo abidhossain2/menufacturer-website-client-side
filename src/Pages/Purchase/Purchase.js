@@ -7,6 +7,7 @@ import './Purchase.css'
 import Loader from '../Loader/Loader';
 import {useAuthState} from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init'
+import { toast } from 'react-toastify';
 
 
 const Purchase = () => {
@@ -14,6 +15,8 @@ const Purchase = () => {
     const { data: purchaseProduct, isLoading, refetch } = useQuery('purchaseProduct', () => fetch(`http://localhost:5000/bikeParts/${id}`).then(res => res.json()))
     const navigate = useNavigate();
     const [error, setError] = useState('')
+    const [phone, setPhone] = useState('')
+    const [address, setAddress] = useState('')
     const [user] = useAuthState(auth)
     if (isLoading) {
         return <Loader></Loader>
@@ -68,17 +71,23 @@ const Purchase = () => {
     }
     const handleOrder = () => {
         const userEmail = user?.email;
+        const userName = user?.displayName;
         const totalPrice = parseInt(price) * parseInt(minimumOrder)
         fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
             },
-            body: JSON.stringify({img, name, detail, minimumOrder, totalPrice, orderQuantity, userEmail})
+            body: JSON.stringify({img, name, detail, minimumOrder, totalPrice, orderQuantity, userName,userEmail, phone, address})
         })
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            if(data.insertedId){
+                toast.success('Order Successful')
+            }else{
+                toast.warn('Order is already set')
+            }
         })
     }
     return (
@@ -108,8 +117,8 @@ const Purchase = () => {
                     <div className='order-info'>
                         <input type="text" placeholder='Name'  value={user?.displayName}/> <br /><br />
                         <input type="email" placeholder='Email' value={user?.email}/> <br /><br />
-                        <input type="text" placeholder='Phone' /> <br /><br />
-                        <input type="text" placeholder='Address' /> <br /><br />
+                        <input type="text" placeholder='Phone' value={phone} onChange={(e) =>setPhone(e.target.value)} /> <br /><br />
+                        <input type="text" placeholder='Address' value={address} onChange={(e) =>setAddress(e.target.value)}/> <br /><br />
                         <p className='total-price'>Total Price: tk {parseInt(price) * parseInt(minimumOrder)}</p>
                         {
                            error ? <button disabled className='order-btn' style={{background:"gray"}}>Place Order</button> : <button className='order-btn' onClick={handleOrder}>Place Order</button>
