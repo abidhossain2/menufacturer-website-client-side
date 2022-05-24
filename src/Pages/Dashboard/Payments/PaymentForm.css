@@ -1,0 +1,53 @@
+.payment-form-container{
+    height: 200px;
+}
+
+.payment-form{
+    width: 535px;
+    display: block;
+    margin: auto;
+    border: 1px solid beige;
+    height: 177px;
+    padding: 26px;
+    background: aliceblue;
+    border-radius: 20px;
+}
+
+.payment-button{
+    border: none;
+    background: orange;
+    padding: 3px 40px;
+    border-radius: 11px;
+    display: block;
+    margin: 46px auto;
+    font-size: 18px;
+    font-family: 'Galdeano';
+    font-weight: bold;
+}
+
+.order-detail{
+    background: aqua;
+    width: 529px;
+    height: 165px;
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Galdeano';
+    margin: 20px auto;
+}
+
+.order-name{
+    font-weight: bold;
+    font-size: 19px;
+    padding-top: 12px
+}
+
+.order-amount{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.order-price{
+    font-size: 23px;
+    font-weight: bold;
+}

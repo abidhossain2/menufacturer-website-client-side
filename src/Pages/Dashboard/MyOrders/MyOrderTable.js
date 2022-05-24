@@ -24,7 +24,7 @@ const MyOrderTable = ({ order, index }) => {
     }
 
     const handlePayment = () => {
-        navigate('payment')
+        navigate(`orders/${_id}`)
     }
     return (
         <>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink, Outlet } from 'react-router-dom';
-import Menubar from '../Menubar/Menubar';
+import Menubar from '../../Menubar/Menubar';
 import './Dashboard.css'
 
 const Dashboard = () => {
