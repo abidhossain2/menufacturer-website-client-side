@@ -26,7 +26,7 @@ const Payment = () => {
             </div>
             <div className='payment-form-container'>
                 <Elements stripe={stripeKey}>
-                    <PaymentForm />
+                    <PaymentForm payment={payment}/>
                 </Elements>
             </div>
         </>
