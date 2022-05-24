@@ -11,7 +11,6 @@ const Menubar = () => {
     let activeStyle = {
         color: 'orange',
         borderBottom: '3px solid orange',
-     
     };
     const [user] = useAuthState(auth)
     const logout = () => {
@@ -32,7 +31,7 @@ const Menubar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        {user && <NavLink className='menu-link display-name' to="/" >{user?.displayName}</NavLink>}
+                        {user && <NavLink className='menu-link display-name' to="" >{user?.displayName}</NavLink>}
                         <NavLink className='menu-link' to="/" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>Home</NavLink>

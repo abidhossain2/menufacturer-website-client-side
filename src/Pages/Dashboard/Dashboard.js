@@ -5,7 +5,7 @@ import Menubar from '../Menubar/Menubar';
 import './Dashboard.css'
 
 const Dashboard = () => {
-
+    
     return (
         <>
             <div className='bg-black'>
@@ -18,8 +18,9 @@ const Dashboard = () => {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mx-auto">
                                 <NavLink to='/dashboard' className='nested-link'>My Orders</NavLink>
-                                <NavLink to='addreview' className='nested-link'>Add Review</NavLink>
-                                <NavLink to='myprofile' className='nested-link'>My Profile</NavLink>
+                                <NavLink to='addreview' className='nested-link' >Add Review</NavLink>
+                                <NavLink to='myprofile' className='nested-link' >My Profile</NavLink>
+                                
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

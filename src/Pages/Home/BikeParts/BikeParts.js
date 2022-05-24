@@ -6,7 +6,7 @@ import Loader from '../../Loader/Loader';
 
 
 const BikeParts = () => {
-    const { data: bikePats, isLoading } = useQuery('bikeParts', () => fetch('http://localhost:5000/bikeParts').then(res => res.json()))
+    const { data: bikeParts, isLoading } = useQuery('bikeParts', () => fetch('http://localhost:5000/bikeParts').then(res => res.json()))
     if (isLoading) {
         return <Loader></Loader>
     }
@@ -16,7 +16,7 @@ const BikeParts = () => {
         <span className='line'><span className='divider'></span></span>
             <div className='all-product'>
                 {
-                    bikePats.map(bikePart => <BikePart
+                    bikeParts.map(bikePart => <BikePart
                     key={bikePart._id}
                     bikePart={bikePart}
                     ></BikePart>)

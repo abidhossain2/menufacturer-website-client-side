@@ -6,9 +6,9 @@
     text-decoration: none;
     color: black;
     font-family: 'Galdeano';
-    font-size: 22px;
+    font-size: 19px;
     font-weight: bold;
-    margin: 30px 30px;
+    margin: 20px 30px;
 }
 
 .nested-link:hover{
