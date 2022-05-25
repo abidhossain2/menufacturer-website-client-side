@@ -1,0 +1,62 @@
+.addprofile-heading-txt{
+    font-family: 'Milonga';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.profile-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.simple-info{
+    background: aliceblue;
+    padding: 45px;
+    border-radius: 18px;
+    font-family: 'Galdeano';
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.more-info-container{
+    background: aliceblue;
+    width: 453px;
+    padding: 15px;
+    font-family: 'Galdeano';
+}
+
+.more-info-form input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 9px;
+}
+
+.info-add-btn, .info-update-btn{
+    border: none;
+    background: goldenrod;
+    color: white;
+    padding: 4px 28px;
+    display: block;
+}
+.info-btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info-heading-txt{
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.info-add-btn:hover{
+    background-color: black;
+    transition: all 0.7s;
+}
+.info-update-btn:hover{
+    background-color: black;
+    transition: all 0.7s;
+}

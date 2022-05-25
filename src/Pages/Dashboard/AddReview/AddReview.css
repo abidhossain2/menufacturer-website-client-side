@@ -1,0 +1,32 @@
+.addreview-heading-txt{
+    font-family: 'Milonga';
+    font-weight: bold;
+    font-size: 24px;
+}
+.review-form{
+    margin-top: 40px;
+}
+.review-field{
+    display: block;
+    margin: auto;
+    width: 330px;
+    border-radius: 10px;
+    border: none;
+    background: aqua;
+    padding: 9px;
+    outline: none;
+    font-family: 'Galdeano';
+}
+
+.review-submit-field{
+    border: none;
+    display: block;
+    margin: auto;
+    background: #323437;
+    padding: 8px 22px;
+    width: 330px;
+    border-radius: 10px;
+    font-family: 'Galdeano';
+    font-weight: bold;
+    color: white;
+}

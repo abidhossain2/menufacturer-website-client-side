@@ -9,8 +9,8 @@ import Register from './Pages/Authentication/Register/Register';
 import ProtectedAuth from './Pages/Authentication/ProtectedAuth/ProtectedAuth';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
-import AddReview from './Pages/Dashboard/AddReview';
-import MyProfile from './Pages/Dashboard/MyProfile';
+import AddReview from './Pages/Dashboard/AddReview/AddReview';
+import MyProfile from './Pages/Dashboard/Dashboard/MyProfile/MyProfile';
 import Payment from './Pages/Dashboard/Payments/Payment'
 
 function App() {
