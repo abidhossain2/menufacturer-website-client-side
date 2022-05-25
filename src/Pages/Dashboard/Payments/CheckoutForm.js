@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
 import './CheckoutForm.css'
+import { toast } from 'react-toastify';
 
 const CheckoutForm = ({booking}) => {
     const stripe = useStripe();
@@ -55,7 +56,11 @@ const CheckoutForm = ({booking}) => {
         if(confirmError){
             setPaymentError(confirmError?.message)
         }else{
-            console.log(paymentIntent);
+            if(paymentIntent.id){
+                toast.success('Payment is successful. Check your dashboard to get transaction ID')
+                setDefect(null)
+                setPaymentError(null)
+            };
         }
         if (error) {
             setDefect(error.message)
@@ -83,8 +88,8 @@ const CheckoutForm = ({booking}) => {
             />
             <button className='payment-button' type="submit" disabled={!stripe || !clientSecret}>
                 Pay
-            </button> <br />
-            {defect} {paymentError}
+            </button>
+            <p className='text-center error-txt'>{defect || paymentError}</p>
         </form>
     );
 };

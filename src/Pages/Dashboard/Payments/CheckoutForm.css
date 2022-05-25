@@ -51,3 +51,10 @@
     font-size: 23px;
     font-weight: bold;
 }
+
+.error-txt{
+    font-family: 'Galdeano';
+    font-weight: bold;
+    font-size: 19px;
+    columns: rgb(249, 39, 39);
+}
