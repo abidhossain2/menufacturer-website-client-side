@@ -22,6 +22,8 @@ const Purchase = () => {
         return <Loader></Loader>
     }
     const { img, name, detail, minimumOrder, availableQuantity, price, orderQuantity } = purchaseProduct;
+
+    const totalPrice = parseInt(price) * parseInt(minimumOrder)
     const backBtn = () => {
         navigate(-1)
     }
@@ -72,13 +74,12 @@ const Purchase = () => {
     const handleOrder = () => {
         const userEmail = user?.email;
         const userName = user?.displayName;
-        const totalPrice = parseInt(price) * parseInt(minimumOrder)
         fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
             },
-            body: JSON.stringify({img, name, detail, minimumOrder, totalPrice, orderQuantity, userName,userEmail, phone, address})
+            body: JSON.stringify({img, name, detail, minimumOrder, price, orderQuantity, userName,userEmail, phone, address, totalPrice})
         })
         .then(res => res.json())
         .then(data => {
@@ -111,7 +112,7 @@ const Purchase = () => {
                     </div>
                         {error}
                     <p className='purchase-product-quantity'>Available Quantity: {availableQuantity} Pieces</p>
-                    <p className='purchase-product-price'>Price: {price}</p>
+                    <p className='purchase-product-price'>Price: tk {price} /piece</p>
                 </div>
                 <div>
                     <div className='order-info'>

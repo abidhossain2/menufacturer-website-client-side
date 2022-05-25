@@ -1,23 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
-import './PaymentForm.css'
+import './CheckoutForm.css'
 
-const PaymentForm = ({payment}) => {
-    const {userName, totalPrice} = payment;
-    const [clientSecret, setClientSecret] = useState("");
+const CheckoutForm = ({booking}) => {
     const stripe = useStripe();
     const elements = useElements();
     const [defect, setDefect] = useState('');
     const [paymentError, setPaymentError] = useState('')
+    const [clientSecret, setClientSecret] = useState('');
+    
+    const {userName, price} = booking;
     useEffect(() => {
-        fetch("/create-payment-intent", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({totalPrice}),
+            fetch('http://localhost:5000/create-payment-intent', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({price})
         })
-            .then((res) => res.json())
-            .then((data) => setClientSecret(data.clientSecret));
-    }, [totalPrice]);
+        .then(res => res.json())
+        .then(data => {
+            if (data.clientSecret) {
+                    setClientSecret(data.clientSecret)
+                }
+            })
+}, [price])
     const handleSubmit = async (e) => {
         e.preventDefault();
 
@@ -32,7 +39,7 @@ const PaymentForm = ({payment}) => {
 
         const { error, paymentMethod } = await stripe.createPaymentMethod({
             type: 'card',
-            card,
+            card
         });
         const { paymentIntent, error:confirmError } = await stripe.confirmCardPayment(
             clientSecret,
@@ -53,7 +60,7 @@ const PaymentForm = ({payment}) => {
         if (error) {
             setDefect(error.message)
         } else {
-            console.log('[PaymentMethod]', paymentMethod);
+            console.log(paymentMethod);
         }
     };
     return (
@@ -74,7 +81,7 @@ const PaymentForm = ({payment}) => {
                     },
                 }}
             />
-            <button className='payment-button' type="submit" disabled={!stripe}>
+            <button className='payment-button' type="submit" disabled={!stripe || !clientSecret}>
                 Pay
             </button> <br />
             {defect} {paymentError}
@@ -82,4 +89,4 @@ const PaymentForm = ({payment}) => {
     );
 };
 
-export default PaymentForm;
+export default CheckoutForm;

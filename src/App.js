@@ -1,5 +1,4 @@
 import './App.css';
-import { QueryClient, QueryClientProvider } from 'react-query'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import Home from './Pages/Home/Home';
@@ -15,9 +14,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import Payment from './Pages/Dashboard/Payments/Payment'
 
 function App() {
-  const queryClient = new QueryClient()
   return (
-    <QueryClientProvider client={queryClient}>
       <div className="App">
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
@@ -29,14 +26,13 @@ function App() {
             <Route index element={<MyOrders></MyOrders>}></Route>
             <Route path='addreview' element={<AddReview></AddReview>}></Route>
             <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
-            <Route path='orders/:id' element={<Payment></Payment>}></Route>
+            <Route path='payment/:id' element={<Payment></Payment>}></Route>
           </Route>
           <Route path='/signin' element={<SignIn></SignIn>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
         </Routes>
         <ToastContainer/>
       </div>
-    </QueryClientProvider>
   );
 }
 

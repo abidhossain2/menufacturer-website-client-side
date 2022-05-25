@@ -16,7 +16,7 @@ const BikePart = ({bikePart}) => {
             <p className='detail'>{detail}</p>
             <p className='min-order'>Minimum Order: {minimumOrder} Pieces</p>
             <p className='quantity'>Available Quantity: {availableQuantity} Pieces</p>
-            <p className='price'>Price: tk {price}</p>
+            <p className='price'>Price: tk {price} /piece</p>
             <button className='purchase-btn' onClick={handlePurchase}>Purchase</button>
         </div>
     );

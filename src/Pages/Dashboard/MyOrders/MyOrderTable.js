@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import './MyOrderTable.css'
 
@@ -9,7 +9,7 @@ const MyOrderTable = ({ order, index }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const navigate = useNavigate();
+
     const handleDelete = () => {
         fetch(`http://localhost:5000/orders/${_id}`, {
             method: 'DELETE'
@@ -23,9 +23,6 @@ const MyOrderTable = ({ order, index }) => {
             })
     }
 
-    const handlePayment = () => {
-        navigate(`orders/${_id}`)
-    }
     return (
         <>
             <Modal show={show} onHide={handleClose}>
@@ -48,7 +45,7 @@ const MyOrderTable = ({ order, index }) => {
                 <td>{name}</td>
                 <td>{orderQuantity} Pieces</td>
                 <td>{totalPrice} Taka</td>
-                <td><button className='paybtn' onClick={handlePayment}>Pay</button></td>
+                <td><Link className='paybtn' to={`payment/${_id}`}>Pay</Link></td>
                 <td>
                     <button className='cancelbtn' onClick={handleShow}>Cancel Order</button>
                 </td>
