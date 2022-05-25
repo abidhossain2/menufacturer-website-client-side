@@ -9,8 +9,9 @@ const CheckoutForm = ({booking}) => {
     const [defect, setDefect] = useState('');
     const [paymentError, setPaymentError] = useState('')
     const [clientSecret, setClientSecret] = useState('');
+    const [paymentId, setPaymentId] = useState('')
     
-    const {userName, price} = booking;
+    const {userName, price, _id} = booking;
     useEffect(() => {
             fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
@@ -56,17 +57,31 @@ const CheckoutForm = ({booking}) => {
         if(confirmError){
             setPaymentError(confirmError?.message)
         }else{
-            if(paymentIntent.id){
                 toast.success('Payment is successful. Check your dashboard to get transaction ID')
+                setPaymentId(paymentIntent.id)
                 setDefect(null)
                 setPaymentError(null)
-            };
         }
         if (error) {
             setDefect(error.message)
         } else {
             console.log(paymentMethod);
         }
+        const transactionId = {
+            paymentId: paymentIntent.id
+        }
+        fetch(`http://localhost:5000/orders/${_id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(transactionId)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+
     };
     return (
         <form onSubmit={handleSubmit} className='payment-form'>
@@ -90,6 +105,7 @@ const CheckoutForm = ({booking}) => {
                 Pay
             </button>
             <p className='text-center error-txt'>{defect || paymentError}</p>
+            <p className='d-none'>{paymentId}</p>
         </form>
     );
 };

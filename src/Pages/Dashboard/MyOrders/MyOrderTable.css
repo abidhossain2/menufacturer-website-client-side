@@ -6,6 +6,10 @@
     font-family: 'Milonga';
     color: white;
     font-size: 16px;
+    text-decoration: none;
+}
+.paybtn:hover{
+    color: white;
 }
 
 .cancelbtn {
@@ -52,4 +56,18 @@
 .modal-body {
     margin: auto;
     padding: 10px;
+}
+
+.paid-btn{
+    border: none;
+    background: greenyellow;
+    border-radius: 9px;
+    font-family: 'Milonga';
+    padding: 5px 27px;
+    font-weight: bold;
+}
+
+.paymentid-txt{
+    font-family: 'Galdeano';
+    font-size: 17px;
 }

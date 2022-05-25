@@ -85,7 +85,7 @@ const Purchase = () => {
         .then(data => {
             console.log(data);
             if(data.insertedId){
-                toast.success('Order Successful')
+                toast.success('Order is successfully add to your dashboard')
             }else{
                 toast.warn('Order is already set')
             }
@@ -122,7 +122,7 @@ const Purchase = () => {
                         <input type="text" placeholder='Address' value={address} onChange={(e) =>setAddress(e.target.value)}/> <br /><br />
                         <p className='total-price'>Total Price: tk {parseInt(price) * parseInt(minimumOrder)}</p>
                         {
-                           error ? <button disabled className='order-btn' style={{background:"gray"}}>Place Order</button> : <button className='order-btn' onClick={handleOrder}>Place Order</button>
+                           error ? <button disabled className='order-btn' style={{background:"gray"}}>Add to cart</button> : <button className='order-btn' onClick={handleOrder}>Add to cart</button>
                         }
                     </div>
                 </div>

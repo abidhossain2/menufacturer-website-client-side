@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import './MyOrderTable.css'
 
 const MyOrderTable = ({ order, index }) => {
-    const { userName, userEmail, phone, address, name, orderQuantity, totalPrice, _id } = order;
+    const { userName, userEmail, phone, address, name, orderQuantity, totalPrice, _id, paid,paymentId } = order;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -45,9 +45,11 @@ const MyOrderTable = ({ order, index }) => {
                 <td>{name}</td>
                 <td>{orderQuantity} Pieces</td>
                 <td>{totalPrice} Taka</td>
-                <td><Link className='paybtn' to={`payment/${_id}`}>Pay</Link></td>
+                <td>{
+                    !paid ? <Link className='paybtn' to={`payment/${_id}`}>Pay</Link> : <button className='paid-btn'>Paid</button>
+                }</td>
                 <td>
-                    <button className='cancelbtn' onClick={handleShow}>Cancel Order</button>
+                    {!paid ? <button className='cancelbtn' onClick={handleShow}>Cancel Order</button> : <p className='paymentid-txt'>TransactionID: <span className='fw-bold'>{paymentId.paymentId}</span></p>}
                 </td>
             </tr>
         </>
