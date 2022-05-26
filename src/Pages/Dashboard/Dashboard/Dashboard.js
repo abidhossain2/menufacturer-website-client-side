@@ -20,7 +20,7 @@ const Dashboard = () => {
                             <Nav className="mx-auto">
                                
                                 {admin ? <NavLink to='/dashboard' className='nested-link'>Add Product</NavLink> : <NavLink to='/dashboard' className='nested-link'>My Orders</NavLink>}
-                                {admin ? <NavLink to='addreview' className='nested-link' >Manage Products</NavLink> : <NavLink to='addreview' className='nested-link' >Add Review</NavLink>}
+                                {admin ? <NavLink to='manageproducts' className='nested-link' >Manage Products</NavLink> : <NavLink to='addreview' className='nested-link' >Add Review</NavLink>}
                                 {admin && <NavLink to='addreview' className='nested-link' >Make Admin</NavLink>}
                                 <NavLink to='myprofile' className='nested-link' >My Profile</NavLink>
                                 

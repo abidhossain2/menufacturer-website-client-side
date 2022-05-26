@@ -1,0 +1,27 @@
+.all-product-container{
+    background: aqua;
+    justify-content: space-around;
+    width: 950px;
+    margin: 40px auto;
+    padding: 14px;
+    border-radius: 19px;
+    font-family: 'Galdeano';
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.product-image{
+    width: 80px;
+    height: 60px;
+}
+
+.delete-btn{
+    border-radius: 3px;
+    border: 1px solid #d2c5c5;
+}
+
+.delete-btn:hover{
+    background-color: rgb(206, 39, 39);
+    color: white;
+    transition: all 0.7s;
+}
