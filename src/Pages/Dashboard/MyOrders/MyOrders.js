@@ -6,7 +6,6 @@ import MyOrderTable from './MyOrderTable';
 
 
 const MyOrders = () => {
-
     const [orders, setOrders] = useState([])
     const [user] = useAuthState(auth)
     const userEmail = user?.email;

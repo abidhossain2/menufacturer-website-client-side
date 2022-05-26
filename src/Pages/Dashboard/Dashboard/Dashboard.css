@@ -14,3 +14,18 @@
 .nested-link:hover{
     color: orange;
 }
+
+.home-link{
+    text-decoration: none;
+    color: white;
+    font-family: 'Galdeano';
+    background: #1d1d59;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.home-link:hover{
+    color: white;
+    background-color: black;
+    transition: all 0.8s;
+}

@@ -22,7 +22,19 @@ const Register = () => {
         })
         await updateProfile({displayName: data.name})
     };
+    const email = user?.email;
     if(user){
+        fetch(`http://localhost:5000/users/${email}`, {
+            method: 'PUT',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify({email})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
         window.location.reload();
         navigate('/')
     }

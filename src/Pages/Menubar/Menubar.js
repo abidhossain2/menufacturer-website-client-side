@@ -3,11 +3,12 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { GiCarWheel } from 'react-icons/gi'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Menubar.css'
 
 const Menubar = () => {
+    const navigate = useNavigate()
     let activeStyle = {
         color: 'orange',
         borderBottom: '3px solid orange',
@@ -15,6 +16,7 @@ const Menubar = () => {
     const [user] = useAuthState(auth)
     const logout = () => {
         signOut(auth);
+        navigate('/')
       };
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark">
