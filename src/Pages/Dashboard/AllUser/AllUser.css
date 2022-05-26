@@ -1,0 +1,29 @@
+.user-table{
+    background: antiquewhite;
+    width: 700px;
+    padding: 19px 28px;
+    height: 61px;
+    margin: 40px auto;
+    font-family: 'Galdeano';
+    font-size: 19px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-table-btn .makeadmin-btn{
+    font-size: 15px;
+    border: none;
+    background: #acb032;
+    color: white;
+    border-radius: 9px;
+    margin-right: 46px;
+}
+.user-table-btn .deleteuser-btn{
+    font-size: 15px;
+    border: none;
+    background: #575a15;
+    color: white;
+    border-radius: 9px;
+    margin-right: 46px;
+}

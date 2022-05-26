@@ -11,7 +11,7 @@ const Dashboard = () => {
     const [admin] = useAdmin(user)
      return (
         <>
-            <div className='nested-link-container'>
+            <div className='nested-link-container  sticky-top'>
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Link to='/' className='ms-auto home-link'>Go to Home Page</Link>
                     <Container>
@@ -21,7 +21,7 @@ const Dashboard = () => {
                                
                                 {admin ? <NavLink to='/dashboard' className='nested-link'>Add Product</NavLink> : <NavLink to='/dashboard' className='nested-link'>My Orders</NavLink>}
                                 {admin ? <NavLink to='manageproducts' className='nested-link' >Manage Products</NavLink> : <NavLink to='addreview' className='nested-link' >Add Review</NavLink>}
-                                {admin && <NavLink to='addreview' className='nested-link' >Make Admin</NavLink>}
+                                {admin && <NavLink to='users' className='nested-link' >Make Admin</NavLink>}
                                 <NavLink to='myprofile' className='nested-link' >My Profile</NavLink>
                                 
                             </Nav>
