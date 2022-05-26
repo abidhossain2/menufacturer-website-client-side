@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { useParams } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
 
-const stripePromise = loadStripe("pk_test_51L1ZYVAvOVS3LV3nfuYkhmbPVHnvnNh6hISU6tw5YmiAG23cHHLXEIpuPxEIasIX4UKxi2ppWbQILVz4mTdjBi4D00nJtSpS52");
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const Payment = () => {
     const { id } = useParams()
