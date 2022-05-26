@@ -118,3 +118,45 @@
     font-family: 'Galdeano';
     font-size: 20px;
 }
+
+@media (max-width:1200px) {
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+    }
+}
+@media (max-width:992px) {
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+    }
+}
+@media (max-width:768px) {
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+    }
+}
+@media (max-width:576px) {
+    .footer-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .footer-container .single-footer{
+        width: 310px;
+        height: 330px;
+    
+    }
+}

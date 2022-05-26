@@ -1,0 +1,21 @@
+.portfolio{
+    width: 800px;
+    font-family: 'Galdeano';
+    margin: 30px auto;
+}
+
+@media (max-width: 992px) {
+    .portfolio{
+        width: 600px;
+    }
+}
+@media (max-width: 768px) {
+    .portfolio{
+        width: 400px;
+    }
+}
+@media (max-width: 576px) {
+    .portfolio{
+        width: 300px;
+    }
+}

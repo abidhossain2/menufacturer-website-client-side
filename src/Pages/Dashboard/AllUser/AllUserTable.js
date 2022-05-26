@@ -50,10 +50,10 @@ const AllUserTable = ({ singleUser, refetch }) => {
             <div className='user-table'>
                 {role === 'admin' ? <p> <span className='fw-bold'>Admin:</span> {email}</p> : <p><span className='fw-bold'>User: </span>{email}</p>}
                 <div className='user-table-btn'> {role !== 'admin' &&
-                    <>
+                    <div className='admin-btn'>
                         <button className='makeadmin-btn' onClick={handleAdmin}>Make Admin</button>
                         <button className='deleteuser-btn' onClick={handleShow}>Delete User</button>
-                    </>
+                    </div>
                 }</div>
 
             </div>

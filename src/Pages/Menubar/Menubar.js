@@ -10,8 +10,7 @@ import './Menubar.css'
 const Menubar = () => {
     const navigate = useNavigate()
     let activeStyle = {
-        color: 'orange',
-        borderBottom: '3px solid orange',
+        color: 'orange'
     };
     const [user] = useAuthState(auth)
     const logout = () => {
@@ -44,7 +43,7 @@ const Menubar = () => {
                             isActive ? activeStyle : undefined
                         }>My Portfolio</NavLink>
                         
-                        {user && <NavLink className='menu-link' to="dashboard" style={({ isActive }) =>
+                        {user && <NavLink className='menu-link' to="/dashboard" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>Dashboard</NavLink>}
                         {!user && <NavLink className='menu-link' to="/signin" style={({ isActive }) =>

@@ -60,3 +60,20 @@
     background-color: black;
     transition: all 0.7s;
 }
+
+@media (max-width: 992px) {
+    .profile-container{
+       flex-direction: column;
+    }
+    .simple-info{
+        margin: auto;
+    }
+    .more-info-container{
+        margin: 30px auto;
+    }
+}
+@media (max-width: 576px) {
+    .more-info-container{
+        width: 300px;
+    }
+}

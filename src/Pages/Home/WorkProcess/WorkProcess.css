@@ -1,29 +1,29 @@
-.workprocess-section{
+.workprocess-section {
     background: #f6f6f6;
     padding: 60px;
 }
 
-.workprocess-heading{
-        text-align: center;
-        font-family: 'Milonga', cursive;
-        font-size: 32px;
-        color: black;
-        margin-bottom: 18px;
+.workprocess-heading {
+    text-align: center;
+    font-family: 'Milonga', cursive;
+    font-size: 32px;
+    color: black;
+    margin-bottom: 18px;
 }
 
-.workprocess-container{
+.workprocess-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-items: center;
     margin-top: 55px;
 }
 
-.single-workprocess-container{
+.single-workprocess-container {
     height: 280px;
     width: 180px;
 }
 
-.single-workprocess{
+.single-workprocess {
     width: 166px;
     height: 166px;
     margin: 18px auto;
@@ -35,7 +35,8 @@
     background: #0e0345;
     color: white;
 }
-.icon-container{
+
+.icon-container {
     width: 166px;
     height: 166px;
     margin: 18px auto;
@@ -44,18 +45,103 @@
     align-items: center;
     color: white;
 }
-.right-arrow{
+
+.right-arrow {
     font-size: 40px;
     color: black;
 }
 
-.work-icon{
+.work-icon {
     font-size: 58px;
 }
 
-.single-workprocess-container p{
+.single-workprocess-container p {
     font-size: 28px;
     font-family: 'Galdeano';
     font-weight: bold;
     color: black;
+}
+
+@media (max-width:992px) {
+    .single-workprocess-container {
+        height: 204px;
+        width: 138px;
+    }
+
+    .single-workprocess-container p {
+        font-size: 21px;
+    }
+
+    .single-workprocess {
+        width: 121px;
+        height: 121px;
+    }
+
+    .work-icon {
+        font-size: 46px;
+    }
+
+    .workprocess-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        margin-top: 55px;
+    }
+}
+@media (max-width:768px) {
+    .single-workprocess-container {
+        height: 140px;
+        width: 100px;
+    }
+
+    .single-workprocess-container p {
+        font-size: 17px;
+    }
+
+    .single-workprocess {
+        width: 100px;
+        height: 100px;
+    }
+
+    .work-icon {
+        font-size: 40px;
+    }
+
+    .workprocess-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        margin-top: 55px;
+    }
+}
+@media (max-width:576px) {
+    .single-workprocess-container {
+        height: 100px;
+        width: 80px;
+    }
+
+    .single-workprocess-container p {
+        font-size: 15px;
+    }
+
+    .single-workprocess {
+        width: 70px;
+        height: 70px;
+    }
+
+    .work-icon {
+        font-size: 25px;
+    }
+
+    .workprocess-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        margin-top: 55px;
+    }
+    .right-arrow {
+        font-size: 20px;
+        color: black;
+        display: none;
+    }
 }

@@ -27,3 +27,31 @@
     border-radius: 9px;
     margin-right: 46px;
 }
+
+@media (max-width:768px) {
+    .user-table{
+        background: antiquewhite;
+        width: 580px;
+        padding: 19px 28px;
+        height: 61px;
+        margin: 40px auto;
+        font-family: 'Galdeano';
+        font-size: 19px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@media (max-width:576px) {
+    .user-table{
+        width: 300px;
+        flex-direction: column;
+        height: 191px;
+        display: flex;
+        margin-top: 30px;
+    }
+    .admin-btn{
+        display: flex;
+        justify-content: space-between;
+    }
+}

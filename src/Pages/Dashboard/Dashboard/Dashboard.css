@@ -29,3 +29,28 @@
     background-color: black;
     transition: all 0.8s;
 }
+
+@media (max-width:992px) {
+    .links{
+        margin-left: auto;
+    }
+    .home-link{
+        margin-right: auto;
+    }
+}
+@media (max-width:768px) {
+    .links{
+        margin-left: auto;
+    }
+    .home-link{
+        margin-right: auto;
+    }
+}
+@media (max-width:576px) {
+    .links{
+        margin-left: auto;
+    }
+    .home-link{
+        margin-right: auto;
+    }
+}

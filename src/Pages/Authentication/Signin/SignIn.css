@@ -119,3 +119,13 @@
     font-family: 'Galdeano';
     padding: 5px 24px;
 }
+
+@media (max-width: 576px) {
+    .signin-form{
+        width: 300px;
+        height: 490px;
+    }
+    .forgot-pass-btn{
+        margin-left: 180px;
+    }
+}

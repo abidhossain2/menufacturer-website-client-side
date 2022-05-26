@@ -46,3 +46,24 @@
     color: white;
     transition: all 0.9s ease-in-out;
 }
+
+@media (max-width:992px) {
+    .single-product{
+        width: 270px;
+        height: 709px;
+    }
+    .single-product img{
+        width: 260px;
+        height: 193px;
+    }
+}
+@media (max-width:768px) {
+    .single-product{
+        width: 270px;
+        height: 709px;
+    }
+    .single-product img{
+        width: 260px;
+        height: 193px;
+    }
+}

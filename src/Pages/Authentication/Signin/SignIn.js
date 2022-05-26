@@ -57,6 +57,10 @@ const SignIn = () => {
             });
     };
 
+    const handleGoogleSign =async()=> {
+        await signInWithGoogle()
+    }
+
     return (
         <>
             <Modal show={show} onHide={handleClose}>
@@ -87,7 +91,7 @@ const SignIn = () => {
                         <span className='form-line'><span className='form-divider'></span></span>
                         <div><p className='text-center exist-account'>Don't have an account!!! <Link className='auth-link' to='/register'>Register</Link></p></div>
                     </form>
-                        <button className='auth-btn' onClick={() => signInWithGoogle()}>Sign In with Google</button>
+                        <button className='auth-btn' onClick={handleGoogleSign}>Sign In with Google</button>
                 </div>
             </div>
         </>

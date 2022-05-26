@@ -30,3 +30,13 @@
     font-weight: bold;
     color: white;
 }
+
+@media (max-width: 576px) {
+    .review-field{
+        width: 250px;
+    }
+    
+    .review-submit-field{
+        width: 250px;
+    }
+}

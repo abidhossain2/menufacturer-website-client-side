@@ -1,19 +1,15 @@
 import React from 'react';
 import Menubar from '../Menubar/Menubar'
+import './MyPortfolio.css'
 
 const MyPortfolio = () => {
-    const customStyle = {
-        'width' : '800px',
-        'margin': ' 20px auto',
-        'fontFamily' : 'Galdeano',
-        'fontSize': '19px'
-    }
+
     return (
         <>
             <div className='bg-black'>
                 <Menubar></Menubar>
             </div>
-            <div style={customStyle}>
+            <div className='portfolio'>
                 <h5><span className='fw-bold'>Name:</span> Abid Hossain</h5>
                 <h5><span className='fw-bold'>Email:</span> abidhossain351@gmail.com</h5>
                 <h5><span className='fw-bold'>Educational Background:</span></h5>

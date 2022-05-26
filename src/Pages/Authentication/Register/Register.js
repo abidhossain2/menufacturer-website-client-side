@@ -38,6 +38,10 @@ const Register = () => {
         window.location.reload();
         navigate('/')
     }
+
+    const handleGoogleSign = async() => {
+        await signInWithGoogle();
+    }
     return (
         <>
             <div className='form-section-menu'>
@@ -58,7 +62,7 @@ const Register = () => {
                         <span className='form-line'><span className='form-divider'></span></span>
                         <div><p className='text-center exist-account'>Already have an account!!! <Link className='auth-link' to='/signin'>Sign In</Link></p></div>
                     </form>
-                    <button className='auth-btn' onClick={() => signInWithGoogle()}>Sign In with Google</button>
+                    <button className='auth-btn' onClick={handleGoogleSign}>Sign In with Google</button>
                 </div>
             </div>
         </>

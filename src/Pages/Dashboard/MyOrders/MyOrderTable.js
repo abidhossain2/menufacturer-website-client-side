@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import './MyOrderTable.css'
 
-const MyOrderTable = ({ order, index }) => {
+const MyOrderTable = ({ order }) => {
     const { userName, userEmail, phone, address, name, orderQuantity, totalPrice, _id, paid,paymentId } = order;
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -20,6 +20,7 @@ const MyOrderTable = ({ order, index }) => {
                 window.location.reload();
                 toast.success('Successfully Deleted')
                 setShow(false)
+                
             })
     }
 
@@ -36,22 +37,21 @@ const MyOrderTable = ({ order, index }) => {
                     </button>
                 </div>
             </Modal>
-            <tr>
-                <td>{index + 1}</td>
-                <td>{userName}</td>
-                <td>{userEmail}</td>
-                <td>{phone}</td>
-                <td>{address}</td>
-                <td>{name}</td>
-                <td>{orderQuantity} Pieces</td>
-                <td>{totalPrice} Taka</td>
-                <td>{
+            <div className='order-card'>
+                <p>Name: {userName}</p>
+                <p>Email: {userEmail}</p>
+                <p>Phone: {phone}</p>
+                <p>Address: {address}</p>
+                <p>Product Name: {name}</p>
+                <p>Quantity: {orderQuantity} Pieces</p>
+                <p>Total Price: {totalPrice} Taka</p>
+                <button className='border-0 bg-transparent'>{
                     !paid ? <Link className='paybtn' to={`payment/${_id}`}>Pay</Link> : <button className='paid-btn'>Paid</button>
-                }</td>
-                <td>
+                }</button>
+                <button className='border-0 bg-transparent'>
                     {!paid ? <button className='cancelbtn' onClick={handleShow}>Cancel Order</button> : <p className='paymentid-txt'>TransactionID: <span className='fw-bold'>{paymentId.paymentId}</span></p>}
-                </td>
-            </tr>
+                </button>
+            </div>
         </>
     );
 };
