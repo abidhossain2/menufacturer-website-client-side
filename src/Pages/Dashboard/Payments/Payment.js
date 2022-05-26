@@ -3,8 +3,6 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import { useParams } from 'react-router-dom';
 import CheckoutForm from './CheckoutForm';
-// import { useQuery } from 'react-query';
-// import Loader from '../../Loader/Loader'
 
 const stripePromise = loadStripe("pk_test_51L1ZYVAvOVS3LV3nfuYkhmbPVHnvnNh6hISU6tw5YmiAG23cHHLXEIpuPxEIasIX4UKxi2ppWbQILVz4mTdjBi4D00nJtSpS52");
 
@@ -12,17 +10,16 @@ const Payment = () => {
     const { id } = useParams()
     const [booking, setBooking] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${id}`)
+        fetch(`http://localhost:5000/orders/${id}`, {
+            method: 'GET'
+        })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 setBooking(data)
             })
     }, [id])
-    // const {data:booking, isLoading} = useQuery(['booking', id], () => fetch(`http://localhost:5000/orders/${id}`).then(res => res.json()))
-    // if(isLoading){
-    //     return <Loader></Loader>
-    // }
+
     return (
         <>
             <div className='order-detail'>

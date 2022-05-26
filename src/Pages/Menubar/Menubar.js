@@ -40,6 +40,9 @@ const Menubar = () => {
                         <NavLink className='menu-link' to="/blogs" style={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }>Blogs</NavLink>
+                        <NavLink className='menu-link' to="/myportfolio" style={({ isActive }) =>
+                            isActive ? activeStyle : undefined
+                        }>My Portfolio</NavLink>
                         
                         {user && <NavLink className='menu-link' to="dashboard" style={({ isActive }) =>
                             isActive ? activeStyle : undefined

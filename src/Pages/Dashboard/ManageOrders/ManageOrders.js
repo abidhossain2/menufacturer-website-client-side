@@ -5,7 +5,9 @@ import './ManageOrders.css'
 import ManageOrderTable from './ManageOrderTable';
 
 const ManageOrders = () => {
-    const {data: allOrders, isLoading, refetch} = useQuery('allOrders', () => fetch('http://localhost:5000/allorders').then(res => res.json()))
+    const {data: allOrders, isLoading, refetch} = useQuery('allOrders', () => fetch('http://localhost:5000/allorders', {
+        method: 'GET'
+    }).then(res => res.json()))
     if(isLoading){
         return <Loader></Loader>
     }

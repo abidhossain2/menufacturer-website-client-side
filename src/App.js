@@ -19,6 +19,8 @@ import useAdmin from './CustomHook/useAdmin';
 import ManageProduct from './Pages/Dashboard/ManageProduct/ManageProduct';
 import AllUser from './Pages/Dashboard/AllUser/AllUser';
 import ManageOrders from './Pages/Dashboard/ManageOrders/ManageOrders';
+import Blogs from './Pages/OpenFolder/Blogs';
+import MyPortfolio from './Pages/OpenFolder/MyPortfolio';
 
 function App() {
   const [user] = useAuthState(auth)
@@ -41,6 +43,8 @@ function App() {
             <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
             <Route path='payment/:id' element={<Payment></Payment>}></Route>
           </Route>
+          <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+          <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
           <Route path='/signin' element={<SignIn></SignIn>}></Route>
           <Route path='/register' element={<Register></Register>}></Route>
         </Routes>

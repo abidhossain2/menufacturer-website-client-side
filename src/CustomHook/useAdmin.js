@@ -10,14 +10,11 @@ const useAdmin = user => {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
-                    
                 }
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     setAdmin(data.admin)
-                    console.log(data.admin)
                 })
         }
     }, [user])

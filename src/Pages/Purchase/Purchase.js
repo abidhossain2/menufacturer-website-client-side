@@ -12,7 +12,12 @@ import { toast } from 'react-toastify';
 
 const Purchase = () => {
     const { id } = useParams()
-    const { data: purchaseProduct, isLoading, refetch } = useQuery('purchaseProduct', () => fetch(`http://localhost:5000/bikeParts/${id}`).then(res => res.json()))
+    const { data: purchaseProduct, isLoading, refetch } = useQuery('purchaseProduct', () => fetch(`http://localhost:5000/bikeParts/${id}`, {
+        method: 'GET',
+        headers:{
+            auth: localStorage.getItem('Secret-Key')
+        }
+    }).then(res => res.json()))
     const navigate = useNavigate();
     const [error, setError] = useState('')
     const [phone, setPhone] = useState('')
