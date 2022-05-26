@@ -1,0 +1,39 @@
+.all-order-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+}
+.all-order{
+    width: 324px;
+    background: aquamarine;
+    text-align: center;
+    font-family: 'Galdeano';
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.ship-btn{
+    border: none;
+    background: orange;
+    color: white;
+    padding: 4px 24px;
+    border-radius: 9px;
+}
+.unpaid-btn{
+    border: none;
+    background: #a76332;
+    color: white;
+    padding: 4px 24px;
+    border-radius: 9px;
+    margin-right: 20px;
+}
+.cancel-order-btn{
+    border: none;
+    background: #e76b13;
+    color: white;
+    padding: 4px 24px;
+    border-radius: 9px;
+}
