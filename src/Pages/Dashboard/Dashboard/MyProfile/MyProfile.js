@@ -17,7 +17,7 @@ const MyProfile = () => {
     const [socialLink, setsocialLink] = useState('')
 
     const addInfo = () => {
-        fetch('https://dry-wave-47967.herokuapp.com/myprofile', {
+        fetch('https://fathomless-earth-48987.herokuapp.com/myprofile', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'
@@ -40,7 +40,7 @@ const MyProfile = () => {
                 })
             }
     const updateInfo = () => {
-        fetch(`https://dry-wave-47967.herokuapp.com/myprofile/${email}`, {
+        fetch(`https://fathomless-earth-48987.herokuapp.com/myprofile/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type' : 'application/json'

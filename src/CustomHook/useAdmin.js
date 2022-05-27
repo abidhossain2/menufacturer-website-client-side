@@ -6,7 +6,7 @@ const useAdmin = user => {
         const email = user?.email;
         console.log(email)
         if (email) {
-            fetch(`https://dry-wave-47967.herokuapp.com/user/${email}`, {
+            fetch(`https://fathomless-earth-48987.herokuapp.com/user/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

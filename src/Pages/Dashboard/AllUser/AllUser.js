@@ -5,7 +5,7 @@ import AllUserTable from './AllUserTable';
 import './AllUser.css'
 
 const AllUser = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://dry-wave-47967.herokuapp.com/users').then(res => res.json()))
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://fathomless-earth-48987.herokuapp.com/users').then(res => res.json()))
     if(isLoading){
         return <Loader></Loader>
     }

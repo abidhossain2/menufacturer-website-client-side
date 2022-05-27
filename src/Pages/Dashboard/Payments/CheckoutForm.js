@@ -13,7 +13,7 @@ const CheckoutForm = ({booking}) => {
     
     const {userName, price, _id} = booking;
     useEffect(() => {
-            fetch('https://dry-wave-47967.herokuapp.com/create-payment-intent', {
+            fetch('https://fathomless-earth-48987.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -70,7 +70,7 @@ const CheckoutForm = ({booking}) => {
         const transactionId = {
             paymentId: paymentIntent.id
         }
-        fetch(`https://dry-wave-47967.herokuapp.com/orders/${_id}`, {
+        fetch(`https://fathomless-earth-48987.herokuapp.com/orders/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json'

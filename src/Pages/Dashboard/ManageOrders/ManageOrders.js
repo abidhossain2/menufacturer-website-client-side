@@ -5,7 +5,7 @@ import './ManageOrders.css'
 import ManageOrderTable from './ManageOrderTable';
 
 const ManageOrders = () => {
-    const {data: allOrders, isLoading, refetch} = useQuery('allOrders', () => fetch('https://dry-wave-47967.herokuapp.com/allorders', {
+    const {data: allOrders, isLoading, refetch} = useQuery('allOrders', () => fetch('https://fathomless-earth-48987.herokuapp.com/allorders', {
         method: 'GET'
     }).then(res => res.json()))
     if(isLoading){

@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth)
     const userEmail = user?.email;
     useEffect(() => {
-        fetch(`https://dry-wave-47967.herokuapp.com/orders?email=${userEmail}`)
+        fetch(`https://fathomless-earth-48987.herokuapp.com/orders?email=${userEmail}`)
             .then(res => res.json())
             .then(data => {
                 setOrders(data);
