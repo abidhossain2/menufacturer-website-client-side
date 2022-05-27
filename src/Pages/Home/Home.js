@@ -13,7 +13,7 @@ const Home = () => {
         <>
             <div className='banner'>
                 <Menubar></Menubar>
-                <h2 className='quote'>The Best <br />Bike<br /> Manufacturer</h2>
+                <h2 className='quote'>High Quality <br />Bike Parts<br /> Manufacturer</h2>
             </div>
             <BikeParts></BikeParts>
             <BusinessSummary></BusinessSummary>

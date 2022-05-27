@@ -58,3 +58,12 @@
     font-size: 19px;
     columns: rgb(249, 39, 39);
 }
+
+@media (max-width:576px) {
+    .order-detail{
+        width: 300px;
+    }
+    .payment-form{
+        width: 300px;
+    }
+}
