@@ -128,4 +128,7 @@
     .forgot-pass-btn{
         margin-left: 180px;
     }
+    .modal-body input{
+        width: 248px;
+    }
 }

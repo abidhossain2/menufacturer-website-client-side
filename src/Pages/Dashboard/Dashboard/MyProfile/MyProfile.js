@@ -28,11 +28,11 @@ const MyProfile = () => {
                 .then(data => {
                     if(data.insertedId){
                         toast.success('Information added successfully')
-                        setEducation(null)
-                        setDistrict(null)
-                        setCity(null)
-                        setPhone(null)
-                        setsocialLink(null)    
+                        setEducation('')
+                        setDistrict('')
+                        setCity('')
+                        setPhone('')
+                        setsocialLink('')    
                     }
                     else{
                         toast.warn('Your information is already stored. You can just update your information')

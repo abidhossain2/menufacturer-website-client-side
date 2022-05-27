@@ -1,9 +1,10 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import './AddReview.css'
 
 const AddReview = () => {
-      const { register, handleSubmit} = useForm();
+      const { register, handleSubmit, reset} = useForm();
       const imageKey = "99c649565f481e45dd720b45713d8e87";
       const onSubmit = async data => {
         const img = data.image[0]
@@ -33,6 +34,10 @@ const AddReview = () => {
                 .then(res =>res.json())
                 .then(feedback => {
                     console.log(feedback)
+                    if(feedback.insertedId){
+                        toast.success('Feedback successfully added')
+                        reset();
+                    }
                 })
             }
         })
