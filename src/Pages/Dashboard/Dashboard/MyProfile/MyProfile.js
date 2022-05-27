@@ -17,7 +17,7 @@ const MyProfile = () => {
     const [socialLink, setsocialLink] = useState('')
 
     const addInfo = () => {
-        fetch('http://localhost:5000/myprofile', {
+        fetch('https://dry-wave-47967.herokuapp.com/myprofile', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'
@@ -40,7 +40,7 @@ const MyProfile = () => {
                 })
             }
     const updateInfo = () => {
-        fetch(`http://localhost:5000/myprofile/${email}`, {
+        fetch(`https://dry-wave-47967.herokuapp.com/myprofile/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type' : 'application/json'

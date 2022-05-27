@@ -8,7 +8,7 @@ const AllUserTable = ({ singleUser, refetch }) => {
     const handleShow = () => setShow(true);
     const { email, role, _id } = singleUser;
     const handleAdmin = () => {
-        fetch(`http://localhost:5000/adminuser/${email}`, {
+        fetch(`https://dry-wave-47967.herokuapp.com/adminuser/${email}`, {
             method: 'PUT'
         })
             .then(res => res.json())
@@ -20,7 +20,7 @@ const AllUserTable = ({ singleUser, refetch }) => {
             })
     }
     const handleDelete = () => {
-        fetch(`http://localhost:5000/adminuser/${_id}`, {
+        fetch(`https://dry-wave-47967.herokuapp.com/adminuser/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

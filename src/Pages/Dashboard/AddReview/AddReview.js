@@ -24,7 +24,7 @@ const AddReview = () => {
                     ratings:data.ratings,
                     feedback:data.detail
                 }
-                fetch('http://localhost:5000/reviews', {
+                fetch('https://dry-wave-47967.herokuapp.com/reviews', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'

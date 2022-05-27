@@ -26,7 +26,7 @@ const AddProduct = () => {
                         availableQuantity: data.availableQuantity,
                         price: data.price
                     }
-                    fetch('http://localhost:5000/bikeparts', {
+                    fetch('https://dry-wave-47967.herokuapp.com/bikeparts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

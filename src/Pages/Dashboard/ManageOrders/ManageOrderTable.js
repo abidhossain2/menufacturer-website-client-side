@@ -11,7 +11,7 @@ const ManageOrderTable = ({ allorder, refetch }) => {
     const { name, userName, userEmail, orderQuantity, phone, totalPrice, paid, _id, shipped } = allorder;
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/allorders/${_id}`, {
+        fetch(`https://dry-wave-47967.herokuapp.com/allorders/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -27,7 +27,7 @@ const ManageOrderTable = ({ allorder, refetch }) => {
         return <Loader></Loader>
     }
     const handleShip = () => {
-        fetch(`http://localhost:5000/allorders/${_id}`, {
+        fetch(`https://dry-wave-47967.herokuapp.com/allorders/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json'

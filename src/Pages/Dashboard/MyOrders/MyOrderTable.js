@@ -11,7 +11,7 @@ const MyOrderTable = ({ order }) => {
     const handleShow = () => setShow(true);
 
     const handleDelete = () => {
-        fetch(`http://localhost:5000/orders/${_id}`, {
+        fetch(`https://dry-wave-47967.herokuapp.com/orders/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

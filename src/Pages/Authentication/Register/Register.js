@@ -24,7 +24,7 @@ const Register = () => {
     };
     const email = user?.email;
     if(user){
-        fetch(`http://localhost:5000/users/${email}`, {
+        fetch(`https://dry-wave-47967.herokuapp.com/users/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json',

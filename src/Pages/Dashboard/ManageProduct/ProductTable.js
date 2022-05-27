@@ -9,7 +9,7 @@ const ProductTable = ({ product, refetch }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const handleDelete = () => {
-        fetch(`http://localhost:5000/bikeParts/${_id}`, {
+        fetch(`https://dry-wave-47967.herokuapp.com/bikeParts/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
