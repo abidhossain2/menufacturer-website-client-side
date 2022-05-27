@@ -9,10 +9,7 @@ const AllUserTable = ({ singleUser, refetch }) => {
     const { email, role, _id } = singleUser;
     const handleAdmin = () => {
         fetch(`http://localhost:5000/adminuser/${email}`, {
-            method: 'PUT',
-            headers: {
-                auth: localStorage.getItem('Secret-Key')
-            }
+            method: 'PUT'
         })
             .then(res => res.json())
             .then(data => {

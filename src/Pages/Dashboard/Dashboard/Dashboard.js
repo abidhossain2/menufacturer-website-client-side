@@ -12,6 +12,7 @@ const Dashboard = () => {
     let activeStyle = {
         color: 'orange'
     };
+
     return (
         <>
             <div className='nested-link-container  sticky-top'>
@@ -33,9 +34,7 @@ const Dashboard = () => {
                     </Container>
                 </Navbar>
             </div>
-
             <Outlet />
-
         </>
     );
 };
