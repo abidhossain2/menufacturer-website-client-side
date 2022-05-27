@@ -1,4 +1,4 @@
-# Delta Two Wheelers Industry
+# Delta Two Wheeler Industry
 
 Live site link: https://bike-manufacture.web.app/
 
