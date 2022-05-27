@@ -26,7 +26,7 @@ const AddProduct = () => {
                         availableQuantity: data.availableQuantity,
                         price: data.price
                     }
-                    fetch('https://fathomless-earth-48987.herokuapp.com/bikeparts', {
+                    fetch('https://blooming-falls-70895.herokuapp.com/bikeparts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

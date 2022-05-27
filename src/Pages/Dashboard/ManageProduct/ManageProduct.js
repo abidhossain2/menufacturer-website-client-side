@@ -6,7 +6,7 @@ import ProductTable from './ProductTable';
 
 const ManageProduct = () => {
 
-    const { data: allProducts, isLoading, refetch } = useQuery('manageproduct', () => fetch('https://fathomless-earth-48987.herokuapp.com/bikeParts').then(res => res.json()))
+    const { data: allProducts, isLoading, refetch } = useQuery('manageproduct', () => fetch('https://blooming-falls-70895.herokuapp.com/bikeParts').then(res => res.json()))
     if (isLoading) {
         return <Loader></Loader>
     }

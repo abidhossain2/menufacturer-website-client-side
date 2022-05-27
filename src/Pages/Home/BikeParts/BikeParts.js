@@ -6,7 +6,7 @@ import Loader from '../../Loader/Loader';
 
 
 const BikeParts = () => {
-    const { data: bikeParts, isLoading } = useQuery('bikeParts', () => fetch('https://fathomless-earth-48987.herokuapp.com/bikeParts').then(res => res.json()))
+    const { data: bikeParts, isLoading } = useQuery('bikeParts', () => fetch('https://blooming-falls-70895.herokuapp.com/bikeParts').then(res => res.json()))
     if (isLoading) {
         return <Loader></Loader>
     }

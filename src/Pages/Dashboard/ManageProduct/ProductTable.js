@@ -9,7 +9,7 @@ const ProductTable = ({ product, refetch }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const handleDelete = () => {
-        fetch(`https://fathomless-earth-48987.herokuapp.com/bikeParts/${_id}`, {
+        fetch(`https://blooming-falls-70895.herokuapp.com/bikeParts/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
