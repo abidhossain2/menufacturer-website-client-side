@@ -2,7 +2,7 @@
 
 Live site link: https://bike-manufacture.web.app/
 
-## Project detail
+## Project details
 
 * This is bike parts selling website. I use firebase authentication system. I also use proteted route. So you can not see any product detail without sign in. 
 
