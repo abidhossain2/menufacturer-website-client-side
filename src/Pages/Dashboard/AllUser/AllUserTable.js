@@ -8,7 +8,7 @@ const AllUserTable = ({ singleUser, refetch }) => {
     const handleShow = () => setShow(true);
     const { email, role, _id } = singleUser;
     const handleAdmin = () => {
-        fetch(`https://fathomless-earth-48987.herokuapp.com/adminuser/${email}`, {
+        fetch(`https://aqueous-mesa-28119.herokuapp.com/adminuser/${email}`, {
             method: 'PUT'
         })
             .then(res => res.json())
@@ -20,7 +20,7 @@ const AllUserTable = ({ singleUser, refetch }) => {
             })
     }
     const handleDelete = () => {
-        fetch(`https://fathomless-earth-48987.herokuapp.com/adminuser/${_id}`, {
+        fetch(`https://aqueous-mesa-28119.herokuapp.com/adminuser/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

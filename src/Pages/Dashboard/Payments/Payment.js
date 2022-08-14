@@ -10,7 +10,7 @@ const Payment = () => {
     const { id } = useParams()
     const [booking, setBooking] = useState({})
     useEffect(() => {
-        fetch(`https://fathomless-earth-48987.herokuapp.com/orders/${id}`, {
+        fetch(`https://aqueous-mesa-28119.herokuapp.com/orders/${id}`, {
             method: 'GET'
         })
             .then(res => res.json())
