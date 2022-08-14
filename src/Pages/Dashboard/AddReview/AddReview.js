@@ -24,7 +24,7 @@ const AddReview = () => {
                     ratings:data.ratings,
                     feedback:data.detail
                 }
-                fetch('https://blooming-falls-70895.herokuapp.com/reviews', {
+                fetch('https://fathomless-earth-48987.herokuapp.com/reviews', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'

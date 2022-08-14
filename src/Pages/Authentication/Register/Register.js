@@ -24,7 +24,7 @@ const Register = () => {
     };
     const email = user?.email;
     if(user){
-        fetch(`https://blooming-falls-70895.herokuapp.com/users/${email}`, {
+        fetch(`https://fathomless-earth-48987.herokuapp.com/users/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json',

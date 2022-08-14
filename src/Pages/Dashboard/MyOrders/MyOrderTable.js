@@ -11,7 +11,7 @@ const MyOrderTable = ({ order }) => {
     const handleShow = () => setShow(true);
 
     const handleDelete = () => {
-        fetch(`https://blooming-falls-70895.herokuapp.com/orders/${_id}`, {
+        fetch(`https://fathomless-earth-48987.herokuapp.com/orders/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

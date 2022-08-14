@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import Review from './Review';
 
 const FeedBack = () => {
-    const {data:reviews, isLoading} = useQuery('reviews', () => fetch('https://blooming-falls-70895.herokuapp.com/reviews').then(res => res.json()))
+    const {data:reviews, isLoading} = useQuery('reviews', () => fetch('https://fathomless-earth-48987.herokuapp.com/reviews').then(res => res.json()))
     if(isLoading){
         return <p>Loading................</p>
     }
