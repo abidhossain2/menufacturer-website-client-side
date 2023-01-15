@@ -35,7 +35,9 @@ const Register = () => {
         .then(data => {
             console.log(data);
         })
-        window.location.reload();
+    }
+    if(user){
+        // window.location.reload();
         navigate('/')
     }
 
