@@ -11,7 +11,7 @@ const MyOrderTable = ({ order }) => {
     const handleShow = () => setShow(true);
 
     const handleDelete = () => {
-        fetch(`https://aqueous-mesa-28119.herokuapp.com/orders/${_id}`, {
+        fetch(`https://products-my73.onrender.com/orders/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

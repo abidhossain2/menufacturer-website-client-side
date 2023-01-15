@@ -24,7 +24,7 @@ const AddReview = () => {
                     ratings:data.ratings,
                     feedback:data.detail
                 }
-                fetch('https://aqueous-mesa-28119.herokuapp.com/reviews', {
+                fetch('https://products-my73.onrender.com/reviews', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'

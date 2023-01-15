@@ -17,7 +17,7 @@ const MyProfile = () => {
     const [socialLink, setsocialLink] = useState('')
 
     const addInfo = () => {
-        fetch('https://aqueous-mesa-28119.herokuapp.com/myprofile', {
+        fetch('https://products-my73.onrender.com/myprofile', {
                     method: 'POST',
                     headers: {
                         'content-type' : 'application/json'
@@ -40,7 +40,7 @@ const MyProfile = () => {
                 })
             }
     const updateInfo = () => {
-        fetch(`https://aqueous-mesa-28119.herokuapp.com/myprofile/${email}`, {
+        fetch(`https://products-my73.onrender.com/myprofile/${email}`, {
                     method: 'PUT',
                     headers: {
                         'content-type' : 'application/json'

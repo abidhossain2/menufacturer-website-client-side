@@ -24,7 +24,7 @@ const Register = () => {
     };
     const email = user?.email;
     if(user){
-        fetch(`https://aqueous-mesa-28119.herokuapp.com/users/${email}`, {
+        fetch(`https://products-my73.onrender.com/users/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json',

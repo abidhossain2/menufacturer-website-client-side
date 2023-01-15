@@ -12,7 +12,7 @@ import { toast } from 'react-toastify';
 
 const Purchase = () => {
     const { id } = useParams()
-    const { data: purchaseProduct, isLoading, refetch } = useQuery('purchaseProduct', () => fetch(`https://aqueous-mesa-28119.herokuapp.com/bikeParts/${id}`, {
+    const { data: purchaseProduct, isLoading, refetch } = useQuery('purchaseProduct', () => fetch(`https://products-my73.onrender.com/bikeParts/${id}`, {
         method: 'GET',
         headers:{
             auth: localStorage.getItem('Secret-Key')
@@ -37,7 +37,7 @@ const Purchase = () => {
         const newAmount = parseInt(orderQuantity)
         console.log(newAmount);
         if (orderAmount !== newAmount) {
-            fetch(`https://aqueous-mesa-28119.herokuapp.com/bikeParts/${id}`, {
+            fetch(`https://products-my73.onrender.com/bikeParts/${id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json'
@@ -59,7 +59,7 @@ const Purchase = () => {
         const orderAmount = parseInt(minimumOrder)
         const availableAmount = parseInt(availableQuantity);
         if ((minimumOrder < availableAmount) && (minimumOrder !== availableAmount)) {
-            fetch(`https://aqueous-mesa-28119.herokuapp.com/bikeParts/${id}`, {
+            fetch(`https://products-my73.onrender.com/bikeParts/${id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'
@@ -79,7 +79,7 @@ const Purchase = () => {
     const handleOrder = () => {
         const userEmail = user?.email;
         const userName = user?.displayName;
-        fetch('https://aqueous-mesa-28119.herokuapp.com/orders', {
+        fetch('https://products-my73.onrender.com/orders', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

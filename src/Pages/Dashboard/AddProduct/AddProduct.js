@@ -26,7 +26,7 @@ const AddProduct = () => {
                         availableQuantity: data.availableQuantity,
                         price: data.price
                     }
-                    fetch('https://aqueous-mesa-28119.herokuapp.com/bikeparts', {
+                    fetch('https://products-my73.onrender.com/bikeparts', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

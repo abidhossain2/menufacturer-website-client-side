@@ -9,7 +9,7 @@ const ProductTable = ({ product, refetch }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const handleDelete = () => {
-        fetch(`https://aqueous-mesa-28119.herokuapp.com/bikeParts/${_id}`, {
+        fetch(`https://products-my73.onrender.com/bikeParts/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

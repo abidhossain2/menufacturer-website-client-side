@@ -11,7 +11,7 @@ const ManageOrderTable = ({ allorder, refetch }) => {
     const { name, userName, userEmail, orderQuantity, phone, totalPrice, paid, _id, shipped } = allorder;
 
     const handleDelete = () => {
-        fetch(`https://aqueous-mesa-28119.herokuapp.com/allorders/${_id}`, {
+        fetch(`https://products-my73.onrender.com/allorders/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -27,7 +27,7 @@ const ManageOrderTable = ({ allorder, refetch }) => {
         return <Loader></Loader>
     }
     const handleShip = () => {
-        fetch(`https://aqueous-mesa-28119.herokuapp.com/allorders/${_id}`, {
+        fetch(`https://products-my73.onrender.com/allorders/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json'
